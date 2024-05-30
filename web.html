@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<title>YT SUMMARIZER</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("YouTube-1200x675.webp");
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+
+
+</style>
+<body>
+
+
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">YT SUMMARIZER</a>
+    
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+    
+    
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+    </div>
+    
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+  
+ 
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+
+<header class="bgimg-1 w3-display-container w3-grayscale-min " style="display:flex; align-items:center; justify-content:center" id="home">
+  
+  <div class="w3-display-left w3-text-white you" style="padding:70px;  height:100vh; width:100vw; ">
+    <h1 class="w3-center" style="color: white; font-size:4.5rem;   font-weight:Bold ; ">YOUTUBE VIDEO SUMMARIZER </h1>
+    
+      <button id="btns" class="w3-button w3-light-grey  w3-center" style="width:300px ;padding:2 auto;  margin-left:550px; margin-top:500px; border-radius:5px" onclick="location.href = 'http://you-t-sum.streamlit.app'"><i class="fa fa-envelope"></i><a href="http://you-t-sum.streamlit.app" style="text-decoration: none; padding-left:5px; color:Grey; ">Click to Summarize</a> </button>
+  
+   
+  </div> 
+
+</header>
+
+<div class="w3-container" style="padding:150px 126px 50px" id="about">
+  <h2 class="w3-center w3-larger" style="font-size: 2rem; font-weight:bold;">Overview of YT Summarizer - Summarize YouTube Videos Instantly</h2>
+  <p class="w3-center w3-larger " style="font-size: 1.6rem;">YT Summarizer is a web application that allows users to get text summaries of YouTube videos. It uses advanced AI to analyze video content and extract the key points into an easy-to-read summary.</p>
+ 
+</div>
+
+
+<!-- About Section -->
+<div class="w3-container" style="padding:78px 16px" id="about">
+  
+  <p class="w3-center w3-larger" style="font-size: 2rem;">Key features of our APP</p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Supports Multiple Languages</p>
+      <p>The AI study tool supports over 10+ languages, including Serbian, English, Spanish, German, French, and more. .</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Video transcription</p>
+      <p> Audio from video is transcribed into text using speech recognition. </p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Text summarization</p>
+      <p>Transcribed text is analyzed to identify and extract only the most important ideas and details. </p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Save and Share Options</p>
+      <p>lets you generate and download your summary video, which can then later be shared summaries on different social media channels. </p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="w3-container w3-light-grey " style="padding:128px 16px">
+  <div class="w3-row-padding">
+    <h1 style="padding-bottom: 50px; text-align:center"> <strong>Summarize YouTube Videos in 3 Steps</strong></h1>
+    <div class="w3-col m4" >
+     <img src="./step-1.png" alt="" style="width:350px; height:300px">
+     <h2>Enter the video link</h2>
+     <p>Find a video on YouTube that you would like to summarize and paste the URL into the field above.</p>
+    </div>
+    <div class="w3-col m4">
+      <img src="./step-2.png" alt="" style="width:350px; height:300px">
+      <h2>Start video summarization</h2>
+      <p>Select the language you want to summarize and click “Summarize” to continue</p>
+
+    </div>
+    <div class="w3-col m4">
+      <img src="./step-3.png" alt="" style="width:350px; height:300px"> 
+      <h2>Get summary and transcript</h2>
+      <p>You’ll have a summary of the video with a transcript that you can share with your friends or followers.</p>
+
+    </div>
+  </div>
+</div>
+
+<div class="w3-container " style="padding:128px 16px">
+  <div class="w3-row-padding">
+    <div class="w3-col m6" style="padding-top: 150px;">
+      <h3>How to Summarize Youtube Videos</h3>
+      <p>Looking to summarize a YouTube video? The Video Summarizer tool can help. Just enter the URL of the video you want to summarize and our tool will do the rest. In seconds, you’ll have a short summary of the video that you can share with your friends or followers.Because our summarization technology is constantly improving, you can be sure that you’re getting the most accurate and up-to-date summaries available.</p>
+      <p><a href="http://you-t-sum.streamlit.app" class="w3-button w3-black"><i class="fa fa-th"> </i> Getting Started</a></p>
+    </div>
+    <div class="w3-col m6">
+      <img src="./about-img.ced5fd34 (1).svg" alt="" style="width:600px; height:600px"> 
+      
+
+    </div>
+  </div>
+</div>
+
+
+<div class="w3-container" style="padding:128px 16px" id="team">
+  <h3 class="w3-center">THE TEAM</h3>
+
+  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+       
+        <div class="w3-container">
+          <h3>Rahul Bohra</h3>
+          <p class="w3-opacity">Graphic Era Hill university</p>
+          <p style="font-size: 10px;"><i class='bx bxl-linkedin-square'></i><a href="https://www.linkedin.com/in/rahul-bohra-1b1b25216/" style="text-decoration: none; color:Grey">https://www.linkedin.com/in/rahul-bohra-1b1b25216/</a>  </p>
+          
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        
+        <div class="w3-container">
+          <h3>Aryan Nirwal</h3>
+          <p class="w3-opacity">Graphic Era Hill university</p>
+          <p style="font-size: 10px;"><i class='bx bxl-linkedin-square'></i> <a href="https://www.linkedin.com/in/aryan-nirwal-717037217/" style="text-decoration: none; color:Grey">https://www.linkedin.com/in/aryan-nirwal-717037217/</a>  </p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+      
+        <div class="w3-container">
+          <h3>Aman Bhatt</h3>
+          <p class="w3-opacity">Graphic Era Hill university</p>
+          <p style="font-size: 10px;"><i class='bx bxl-linkedin-square'></i><a href="https://www.linkedin.com/in/aman-bhatt-69bb29216/" style="text-decoration: none; color:Grey">https://www.linkedin.com/in/aman-bhatt-69bb29216/</a> </p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        
+        <div class="w3-container">
+          <h3>Chitraj Bisht</h3>
+          <p class="w3-opacity">Graphic Era Hill university</p>
+          <p  style="font-size: 10px;"><i class='bx bxl-linkedin-square'></i><a href="https://www.linkedin.com/in/chitraj-bisht-95b051217/" style="text-decoration: none; color:Grey">https://www.linkedin.com/in/chitraj-bisht-95b051217/</a> </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="w3-container w3-light-grey w3-padding-64">
+  <div class="w3-row-padding">
+    <h1 style="padding-bottom: 50px; text-align:center"><strong>Frequently Asked Questions</strong></h1>
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+           <strong>What is a Video Summarizer?</strong> 
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Video summarization is the process of using AI to condense long videos into shorter, more digestible summaries. YT SUMMARIZER uses NLP to analyze video content, identify key moments, extract relevant information, and generate clear, concise, text-based summaries.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <strong>Why is YT SUMMARIZER the Good at Summarizing?</strong>
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            YT SUMMARIZER stands out due to its cutting-edge AI, accurate transcription, speaker identification, custom vocabularies, and support for over 6 languages. These features ensure highly accurate and reliable video summaries.
+          </div>
+        </div>
+      </div>
+   
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+            <strong>Does YT SUMMARIZER Work with YouTube?</strong>
+          </button>
+        </h2>
+        <div id="collapsefour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Yes! You can either use the integrated screen recording feature to capture YouTube videos or download the YouTube video and upload it.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+            <strong>Can I save the transcript and summary of the video?</strong>
+          </button>
+        </h2>
+        <div id="collapsefive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Yes. You can click the 'Copy' button on the summary page and paste the text into your document or email.
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  
+  </div>
+</div>
+
+
+
+
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">CONTACT</h3>
+  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+  <div style="margin-top:48px">
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Dehradun, India</p>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: 9548605864</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: aryannirwal72@mail.com</p>
+    <br>
+    <form target="mailto:aryannirwal72@gmail.com">
+      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+     
+      <p><a href="mailto:aryannirwal72@gmail.com" class="w3-button w3-black">Send Message</a></p>
+    </form>
+    
+    
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+ 
+</footer>
+ 
+<script>
+  document.getElementById("btns").addEventListener("click",()=>{
+    window.open("http://you-t-sum.streamlit.app");
+  })
+    function openWin() {
+        window.open("http://you-t-sum.streamlit.app");
+      }
+      function open(){
+        window.open("https://mail.google.com/mail/u/0/#inbox");
+      }
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>
